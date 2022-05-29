@@ -1,0 +1,30 @@
+/* 0-600 
+   601-700
+   701-1100
+   1100-  */
+
+/* TODO min-height css page   */
+
+@media all and (max-width: 600px) {
+    * {
+        /* background-color: royalblue; */
+    }
+}
+
+@media all and (max-width: 700px) {
+    * {
+        /* background-color: royalblue; */
+    }
+}
+
+@media all and (max-width: 700px) {
+    * {
+        /* background-color: royalblue; */
+    }
+}
+
+@media all and (min-height: 200px) {
+    * {
+        /*  background-color: royalblue; */
+    }
+}
