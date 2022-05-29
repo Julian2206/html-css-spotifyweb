@@ -1,0 +1,330 @@
+ /* $check margin and border */
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Arial, Helvetica, sans-serif;
+     color: white;
+ }
+
+ html,
+ body {
+     padding: 0;
+     margin: 0;
+     height: 100%;
+ }
+
+
+ #bodyContent {
+     background-color: #181818;
+     font-size: 18px;
+     overflow-y: scroll;
+     min-width: 720px;
+     max-height: 1280px;
+ }
+
+ #bodyNavContainer {
+     margin-bottom: 40px;
+     display: flex;
+     text-align: center;
+     padding: 20px;
+ }
+
+ #bodyNavList {
+     text-decoration: none;
+     list-style: none;
+     display: flex;
+     justify-content: center;
+     align-self: center;
+     padding: 10px;
+     max-width: 100%;
+     width: 100%;
+     height: 40px;
+ }
+
+ .bodyNavLink a {
+     text-decoration: none;
+     list-style: none;
+     padding: 20px;
+ }
+
+ .bodyNavLink a:hover {
+     color: rebeccapurple;
+ }
+
+
+
+
+
+ #nowPlayingBarContainer {
+     width: 100%;
+     background-color: #282828;
+     bottom: 0;
+     position: fixed;
+     min-width: 620;
+ }
+
+ #nowPlayingBar {
+     display: flex;
+     height: 90px;
+     padding: 16px;
+     box-sizing: border-box;
+ }
+
+ #nowPlayingLeft,
+ #nowPlayingRight {
+     width: 30%;
+     min-width: 180px;
+ }
+
+ #nowPlayingRight {
+     position: relative;
+     margin-top: 16px;
+ }
+
+ #nowPlayingCenter {
+     width: 40%;
+     /* if needen enlarge the max width */
+     max-width: 700px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .nowPlayingBar .content {
+     width: 100%;
+     height: 60px;
+ }
+
+ .playerControls .buttons {
+     margin: 0 auto;
+     display: table;
+
+ }
+
+ .controlButton {
+     background-color: transparent;
+     border: none;
+     /* make the footbar alligned */
+     vertical-align: middle;
+ }
+
+ .controlButton img {
+     width: 20px;
+     height: 20px;
+ }
+
+ /* looking for 2 classes  */
+ .controlButton.play img,
+ .controlButton.pause img {
+     width: 32px;
+     height: 32px;
+
+ }
+
+ /* TODO check-button-hover */
+
+ .controlButton:hover {
+     cursor: pointer;
+ }
+
+ /* progress */
+
+ .progressTime {
+     color: #a8a8a8;
+     font-size: 11px;
+     width: 200px;
+     min-width: 40px;
+     text-align: center;
+ }
+
+
+ .playbackBar {
+     display: flex;
+ }
+
+ .progressBar {
+     width: 100%;
+     height: 12px;
+     display: inline-flex;
+     cursor: pointer;
+ }
+
+ /* progress bar background */
+
+ .progressBarBg {
+     background-color: #404040;
+     height: 4px;
+     width: 100%;
+     border-radius: 2px;
+ }
+
+ .progress {
+     background-color: #a0a0a0;
+     height: 4px;
+     /* width set to 0  */
+     width: 0;
+     border-radius: 2px;
+ }
+
+ .playbackBar .progressBar {
+     margin-top: 3px;
+ }
+
+ #nowPlayingLeft .albumArtwork {
+     height: 100%;
+     max-width: 60px;
+     margin-right: 15px;
+     float: left;
+     /* make the image fitting the avaible space */
+     background-size: cover;
+ }
+
+ #nowPlayingLeft .trackInfo {
+     display: table;
+ }
+
+ #nowPlayingLeft .trackInfo .trackName {
+     margin: 6px 0;
+     display: inline-block;
+     width: 100%;
+ }
+
+ #nowPlayingLeft .trackInfo .artistName span {
+     font-size: 12px;
+     color: #a0a0a0;
+ }
+
+ .volumeBar {
+     width: 180px;
+     position: absolute;
+     right: 0;
+ }
+
+ .volumeBar .progressBar {
+     width: 125px;
+ }
+
+ #topContainer {
+     min-height: 100%;
+     width: 100%;
+ }
+
+ #navBarContainer {
+     background-color: #000;
+     width: 220px;
+     /* all view */
+     height: 100%;
+     min-height: 100%;
+     /* fixed to the viewport */
+     position: fixed;
+ }
+
+ .navBar {
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     z-index: 1;
+     /*     -ms-flex-direction: column;*/
+ }
+
+ /* logo */
+
+ .logo {
+     margin-bottom: 15px;
+ }
+
+ .navBar .group {
+     border-top: 1px solid #a0a0a0;
+     padding: 10px 0;
+ }
+
+ .navItem {
+     padding: 10px 0;
+     font-size: 14px;
+     font-weight: 700px;
+     /* enlarge txt -> */
+     letter-spacing: 1px;
+     position: relative;
+ }
+
+ .navItemLink {
+     color: #a0a0a0;
+     text-decoration: none;
+ }
+
+ .navItemLink:hover {
+     color: rebeccapurple;
+ }
+
+ .navItemLink .icon {
+     position: absolute;
+     right: 0;
+     top: 6px;
+     width: 25px;
+ }
+
+ #mainViewContainer {
+     margin-left: 220px;
+     width: calc(100% - 220px);
+ }
+
+ #mainContent {
+     padding: 0 20px;
+ }
+
+ /* mainView */
+
+ #mainViewContainer {
+     margin-left: 220px;
+     width: calc(100% - 260px);
+     display: flex;
+     align-items: flex-end;
+     /* padding: 90px; */
+ }
+
+ #mainContent {
+     padding: 0 20px;
+ }
+
+ #headerContainer {
+     position: absolute;
+     height: 100px;
+     min-height: 80px;
+     width: 100%;
+     max-width: 100%;
+     background-color: #000;
+ }
+
+ .headerButton {
+     position: absolute;
+     right: 0;
+     font-size: 20px;
+     padding: 4px;
+     border-radius: 30px;
+     border: 1px solid white;
+     background-color: black;
+     margin-top: 30px;
+     margin-right: 30px;
+ }
+
+ .headerButton:hover {
+     background-color: rebeccapurple;
+     cursor: pointer;
+ }
+
+ #mainBodyContainer {
+     margin-top: 100px;
+     margin-left: 240px;
+     overflow: auto;
+ }
+
+ #bodyImageContainer {
+     margin-bottom: 200px;
+ }
+
+ #bodyImageContainer img {
+     height: 200px;
+     width: 200px;
+ }
